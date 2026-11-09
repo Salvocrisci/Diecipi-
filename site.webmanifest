@@ -1,0 +1,12 @@
+{
+  "name": "DIECI+",
+  "short_name": "DIECI+",
+  "theme_color": "#36298D",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "icons": [
+    { "src": "assets/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/brand/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/brand/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
