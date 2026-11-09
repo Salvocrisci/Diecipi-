@@ -271,7 +271,7 @@ a { color: inherit; }
 .manifesto { padding-block: clamp(96px, 12vw, 176px); background: var(--lavanda-50); position: relative; overflow: hidden; }
 .manifesto blockquote {
   margin: 28px 0 0; font: 300 clamp(40px, 7vw, 112px)/.98 var(--display); letter-spacing: -.05em;
-  max-width: 14ch;
+  max-width: 15ch;
 }
 .manifesto blockquote b { font-weight: 400; color: var(--viola); }
 .manifesto .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: 72px; max-width: 860px; }
