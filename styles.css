@@ -416,7 +416,12 @@ a { color: inherit; }
 .voice-who .av { width: 46px; height: 46px; border-radius: 50%; background: var(--viola); color: var(--bianco); display: grid; place-items: center; font: 600 18px/1 var(--display); flex: none; }
 .voice-who b { display: block; font: 500 18px/1.25 var(--display); }
 .voice-who span { font-size: 14.5px; color: var(--testo-2); }
-@media (max-width: 760px) { .voice-feature { grid-template-columns: minmax(0, 1fr); } .voice-feature .reel { width: 100%; max-width: 360px; margin-inline: auto; } }
+.voice-feature.rev { grid-template-columns: minmax(0, 1fr) minmax(0, 340px); }
+.voice-feature.rev .reel { order: 2; }
+.voice-stat b { display: block; font: 500 clamp(56px, 8vw, 104px)/.95 var(--display); letter-spacing: -.04em; color: var(--viola); font-variant-numeric: tabular-nums; }
+.voice-stat span { display: block; margin-top: 12px; font-size: clamp(17px, 1.6vw, 20px); color: var(--testo-2); max-width: 34ch; }
+.voice-stat em { font-style: normal; font-weight: 600; color: var(--testo); }
+@media (max-width: 760px) { .voice-feature, .voice-feature.rev { grid-template-columns: minmax(0, 1fr); } .voice-feature.rev .reel { order: 0; } .voice-feature .reel { width: 100%; max-width: 360px; margin-inline: auto; } }
 
 /* --------------------------------------------------------------------------
    Metodo
@@ -513,3 +518,24 @@ a { color: inherit; }
   .js .hero.in .reel-stack .reel:nth-child(3) { transition-delay: .5s; }
 }
 [hidden] { display: none !important; }
+
+/* Lavori con video reali */
+.work-grid.few { grid-template-columns: repeat(2, minmax(0, 320px)); gap: clamp(20px, 3vw, 40px); }
+.work { margin: 0; display: grid; gap: 16px; }
+.work .reel { background: var(--viola-notte); }
+.work .play-btn, .voice-feature .play-btn { border: 0; cursor: pointer; z-index: 2; }
+.work .play-btn { width: 60px; height: 60px; margin: -30px 0 0 -30px; }
+.work .play-btn svg { width: 20px; height: 20px; }
+.work .dur, .voice-feature .dur { position: absolute; top: 14px; right: 14px; z-index: 2; font: 500 12px/1 var(--testo-font); color: var(--bianco); background: rgba(23,18,61,.6); padding: 6px 9px; border-radius: 999px; pointer-events: none; }
+.work figcaption b { display: block; font: 500 20px/1.2 var(--display); margin: 8px 0 4px; }
+.work figcaption > span:last-child { font-size: 14.5px; color: var(--testo-2); }
+@media (max-width: 560px) { .work-grid.few { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 78%; } }
+
+/* Chi siamo senza foto */
+.about-card { background: var(--viola); color: var(--bianco); border-radius: 28px; padding: clamp(28px, 4vw, 48px); display: grid; gap: clamp(28px, 4vw, 44px); align-content: center; }
+.about-card .logo { width: clamp(96px, 14vw, 140px); height: auto; }
+.about-card ul { list-style: none; margin: 0; padding: 0; display: grid; }
+.about-card li { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 16px; padding: 18px 0; border-top: 1px solid rgba(255,255,255,.22); align-items: baseline; }
+.about-card li b { font: 500 clamp(20px, 2vw, 24px)/1.15 var(--display); letter-spacing: -.01em; }
+.about-card li span { font-size: 15px; color: rgba(255,255,255,.78); }
+@media (max-width: 420px) { .about-card li { grid-template-columns: minmax(0, 1fr); gap: 4px; } }

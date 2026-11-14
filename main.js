@@ -2,9 +2,9 @@
 
 // ---- Da compilare: contatti reali ----
 const CONFIG = {
-  whatsapp: "447341696646",  // +44 7341 696646 (prefisso internazionale, solo cifre)
+  whatsapp: "393920005024",  // +39 392 000 5024 (prefisso internazionale, solo cifre)
   messaggio: "Ciao DIECI+, vorrei informazioni per la mia attività.",
-  instagram: "https://www.instagram.com/dieci_piu_/",
+  instagram: "https://www.instagram.com/diecipiu_agency/",
   tiktok: "https://www.tiktok.com/@dieci_piu"
 };
 
