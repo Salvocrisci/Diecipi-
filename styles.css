@@ -549,3 +549,4 @@ a.reel-stack { display: block; color: inherit; text-decoration: none; }
 .reel.live .bar::after { background: var(--bianco); }
 .reel.live .meta span { color: var(--bianco); }
 .voice-quote { margin: 0; font: 400 clamp(18px, 1.7vw, 22px)/1.4 var(--display); color: var(--testo); max-width: 36ch; }
+.reel-stack::before { content: none; }
