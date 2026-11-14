@@ -282,19 +282,21 @@
         <p>Chi sono, com'erano i social prima, cosa è cambiato e perché ci consigliano.</p>
       </div>
     </div>
-    <!-- Una figura per ogni video-testimonianza (liberatoria firmata) -->
-    <div class="voices">
-      <figure class="voice" data-reveal>
-        <div class="reel"><div class="play"><svg viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></div></div>
-        <figcaption><span class="label muted">Testimonianza 01</span><b>Nome cliente</b><span>Attività · Città</span></figcaption>
-      </figure>
-      <figure class="voice" data-reveal style="--d:.1s">
-        <div class="reel"><div class="play"><svg viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></div></div>
-        <figcaption><span class="label muted">Testimonianza 02</span><b>Nome cliente</b><span>Attività · Città</span></figcaption>
-      </figure>
-      <figure class="voice" data-reveal style="--d:.2s">
-        <div class="reel"><div class="play"><svg viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></div></div>
-        <figcaption><span class="label muted">Testimonianza 03</span><b>Nome cliente</b><span>Attività · Città</span></figcaption>
+    <!-- Una figura per ogni video-testimonianza (liberatoria firmata).
+         Per aggiungerne una: copiare <figure class="voice-feature">, cambiare video, poster e testi. -->
+    <div class="voices-list">
+      <figure class="voice-feature" data-reveal>
+        <div class="reel">
+          <video id="v-civico191" src="assets/clienti/civico191.mp4" poster="assets/clienti/civico191.jpg" preload="none" playsinline></video>
+          <span class="dur">2:13</span>
+          <button class="play play-btn" type="button" data-play="v-civico191" aria-label="Guarda la testimonianza di Civico 191"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></button>
+        </div>
+        <figcaption>
+          <span class="label">Ristorazione · Ristorante e Gastronomia</span>
+          <blockquote>Grazie a DIECI+ non abbiamo più tempo di ordinare casa.</blockquote>
+          <ul class="voice-tags"><li>Reel</li><li>Gestione social</li><li>Riprese in sede</li></ul>
+          <div class="voice-who"><span class="av" aria-hidden="true">P</span><div><b>Pierpaolo</b><span>Titolare di Civico 191</span></div></div>
+        </figcaption>
       </figure>
     </div>
   </div>

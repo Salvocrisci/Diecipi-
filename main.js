@@ -52,6 +52,20 @@ const CONFIG = {
   menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 
+  // Video testimonianze: parte con l'audio solo al click
+  document.querySelectorAll("[data-play]").forEach((b) => {
+    b.addEventListener("click", () => {
+      const v = document.getElementById(b.dataset.play);
+      const box = b.closest(".reel");
+      document.querySelectorAll("video").forEach((o) => { if (o !== v) o.pause(); });
+      b.hidden = true;
+      const d = box.querySelector(".dur"); if (d) d.hidden = true;
+      box.classList.add("playing");
+      v.controls = true;
+      const p = v.play(); if (p && p.catch) p.catch(() => {});
+    });
+  });
+
   // Ingressi
   const hero = document.querySelector(".hero");
   requestAnimationFrame(() => requestAnimationFrame(() => hero.classList.add("in")));
