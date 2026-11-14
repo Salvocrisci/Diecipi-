@@ -6,71 +6,27 @@
   const calm = window.matchMedia("(prefers-reduced-motion: reduce)");
   const io = (cb, opts) => ("IntersectionObserver" in window ? new IntersectionObserver(cb, opts) : null);
 
-  /* ---------- Risultati: numeri presi dalle testimonianze esistenti ---------- */
-  const clienti = document.getElementById("clienti");
-  const list = clienti && clienti.querySelector(".voices-list");
-  const results = [];
-  if (list) {
-    list.querySelectorAll(".voice-feature").forEach((f) => {
-      const stat = f.querySelector(".voice-stat");
-      if (!stat) return;
-      const big = stat.querySelector("b").textContent.trim();
-      const text = stat.querySelector("span").innerHTML;
-      const who = f.querySelector(".voice-who b");
-      const role = f.querySelector(".voice-who div span");
-      const sector = f.querySelector("figcaption > .label");
-      results.push({ big, text, who: who ? who.textContent : "", role: role ? role.textContent : "", sector: sector ? sector.textContent : "" });
-    });
-  }
-  if (results.length) {
-    const wrap = document.createElement("div");
-    wrap.className = "m-only m-results";
-    wrap.setAttribute("aria-label", "Risultati dei clienti");
-    results.forEach((r) => {
-      const card = document.createElement("article");
-      card.className = "m-result";
-      card.innerHTML =
-        '<span class="label"></span>' +
-        '<div class="m-big" aria-hidden="true"></div>' +
-        '<p class="sr-only"></p>' +
-        '<p class="m-text" aria-hidden="true"></p>' +
-        '<span class="m-src"></span>';
-      card.querySelector(".label").textContent = "Risultato · " + r.sector;
-      card.querySelector(".m-big").textContent = r.big;
-      card.querySelector(".m-big").dataset.final = r.big;
-      card.querySelector(".m-text").innerHTML = r.text;
-      card.querySelector(".sr-only").textContent = r.big + " " + card.querySelector(".m-text").textContent;
-      card.querySelector(".m-src").textContent = "Fonte: " + r.who + (r.role ? ", " + r.role : "") + " · video qui sotto";
-      wrap.appendChild(card);
-    });
-    list.parentNode.insertBefore(wrap, list);
-    document.documentElement.classList.add("has-mresults");
-
-    // Numeri che salgono, una volta sola, quando entrano nello schermo
-    const countUp = (el) => {
-      const final = el.dataset.final;
-      const m = final.match(/^(\D*)([\d.]+)(\D*)$/);
-      if (!m || calm.matches) return;
-      const target = parseInt(m[2].replace(/\./g, ""), 10);
-      const fmt = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-      const t0 = performance.now(), dur = target > 100 ? 1400 : 900;
-      const step = (t) => {
-        const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
-        el.textContent = m[1] + fmt(Math.max(1, Math.round(target * e))) + m[3];
-        if (p < 1) requestAnimationFrame(step); else el.textContent = final;
-      };
-      requestAnimationFrame(step);
+  /* ---------- Risultati: il numero di ogni cliente sale quando entra nello schermo ---------- */
+  const stats = [...document.querySelectorAll("#clienti .voice-stat b")];
+  const countUp = (el) => {
+    const final = el.textContent.trim();
+    const m = final.match(/^(\D*)([\d.]+)(\D*)$/);
+    if (!m || calm.matches || !mq.matches) return;
+    const target = parseInt(m[2].replace(/\./g, ""), 10);
+    const fmt = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    const t0 = performance.now(), dur = target > 100 ? 1400 : 900;
+    el.setAttribute("aria-label", final);
+    const step = (t) => {
+      const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = m[1] + fmt(Math.max(1, Math.round(target * e))) + m[3];
+      if (p < 1) requestAnimationFrame(step); else { el.textContent = final; el.removeAttribute("aria-label"); }
     };
-    const ro = io((entries) => {
-      entries.forEach((e) => {
-        if (!e.isIntersecting) return;
-        e.target.classList.add("in");
-        if (mq.matches) countUp(e.target.querySelector(".m-big"));
-        ro.unobserve(e.target);
-      });
-    }, { threshold: 0.35 });
-    wrap.querySelectorAll(".m-result").forEach((c) => (ro ? ro.observe(c) : c.classList.add("in")));
-  }
+    requestAnimationFrame(step);
+  };
+  const so = io((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { countUp(e.target); so.unobserve(e.target); } });
+  }, { threshold: 0.6 });
+  if (so) stats.forEach((b) => so.observe(b));
 
   /* ---------- Lavori: carosello con un progetto protagonista ---------- */
   const work = document.querySelector(".m-work");
