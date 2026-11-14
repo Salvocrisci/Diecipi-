@@ -34,10 +34,9 @@
     </a>
     <ul class="nav-links">
       <li><a href="#clienti">Clienti</a></li>
+      <li><a href="#metodo">Metodo</a></li>
       <li><a href="#pacchetti">Pacchetti</a></li>
       <li><a href="#siti">Siti web</a></li>
-      <li><a href="#lavori">Lavori</a></li>
-      <li><a href="#metodo">Metodo</a></li>
       <li><a href="#chi-siamo">Chi siamo</a></li>
     </ul>
     <a class="btn btn-primary btn-sm" data-wa href="#contatti">Scrivici su WhatsApp</a>
@@ -47,10 +46,9 @@
 <nav class="mobile-menu" id="menu" aria-label="Menu">
   <ol>
     <li><a href="#clienti">Clienti</a></li>
+    <li><a href="#metodo">Metodo</a></li>
     <li><a href="#pacchetti">Pacchetti</a></li>
     <li><a href="#siti">Siti web</a></li>
-    <li><a href="#lavori">Lavori</a></li>
-    <li><a href="#metodo">Metodo</a></li>
     <li><a href="#chi-siamo">Chi siamo</a></li>
   </ol>
   <a class="btn btn-primary" data-wa href="#contatti">Scrivici su WhatsApp</a>
@@ -77,11 +75,11 @@
       </div>
     </div>
 
-    <div class="reel-stack" aria-hidden="true">
-      <div class="reel"><div class="bar"></div><div class="meta"><span>Pizzeria</span></div></div>
-      <div class="reel"><div class="bar"></div><div class="play"><svg viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></div><div class="meta"><span>Barbiere</span></div></div>
-      <div class="reel"><div class="bar"></div><div class="meta"><span>Palestra</span></div></div>
-    </div>
+    <a class="reel-stack" href="#clienti" aria-label="Guarda le testimonianze dei clienti">
+      <div class="reel live"><video src="hero-1.mp4" poster="hero-1.jpg" autoplay muted loop playsinline preload="auto"></video><div class="bar"></div><div class="meta"><span>Gastronomia</span></div></div>
+      <div class="reel live"><video src="hero-2.mp4" poster="hero-2.jpg" autoplay muted loop playsinline preload="auto"></video><div class="bar"></div><div class="meta"><span>Calcio</span></div></div>
+      <div class="reel live"><video src="hero-3.mp4" poster="hero-3.jpg" autoplay muted loop playsinline preload="auto"></video><div class="bar"></div><div class="meta"><span>Ristorante</span></div></div>
+    </a>
   </div>
 
   <div class="hero-facts" data-reveal style="--d:.6s">
@@ -116,13 +114,14 @@
     <div class="voices-list">
       <figure class="voice-feature" data-reveal>
         <div class="reel">
-          <video id="v-civico191" src="assets/clienti/civico191.mp4" poster="assets/clienti/civico191.jpg" preload="none" playsinline></video>
+          <video id="v-civico191" src="civico191.mp4" poster="civico191.jpg" preload="none" playsinline></video>
           <span class="dur">2:13</span>
           <button class="play play-btn" type="button" data-play="v-civico191" aria-label="Guarda la testimonianza di Civico 191"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></button>
         </div>
         <figcaption>
           <span class="label">Ristorazione · Ristorante e Gastronomia</span>
-          <blockquote>Grazie a DIECI+ non abbiamo più tempo di ordinare casa.</blockquote>
+          <div class="voice-stat"><b>×5</b><span>il fatturato rispetto a un anno fa.</span></div>
+          <p class="voice-quote">“Grazie a DIECI+ non abbiamo più tempo di ordinare casa.”</p>
           <ul class="voice-tags"><li>Reel</li><li>Gestione social</li><li>Riprese in sede</li></ul>
           <div class="voice-who"><span class="av" aria-hidden="true">P</span><div><b>Pierpaolo</b><span>Titolare di Civico 191</span></div></div>
         </figcaption>
@@ -130,7 +129,7 @@
 
       <figure class="voice-feature rev" data-reveal>
         <div class="reel">
-          <video id="v-clubplayer" src="assets/clienti/club-and-player.mp4" poster="assets/clienti/club-and-player.jpg" preload="none" playsinline></video>
+          <video id="v-clubplayer" src="club-and-player.mp4" poster="club-and-player.jpg" preload="none" playsinline></video>
           <span class="dur">1:52</span>
           <button class="play play-btn" type="button" data-play="v-clubplayer" aria-label="Guarda la testimonianza di Club and Player"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></button>
         </div>
@@ -157,11 +156,30 @@
   </div>
 </section>
 
+<!-- ============================ METODO ============================ -->
+<section class="section" id="metodo" aria-labelledby="metodo-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index" data-reveal><span class="n">02</span><span class="label">Metodo</span></div>
+      <div data-reveal style="--d:.1s">
+        <h2 id="metodo-title">Dal primo caffè alla <em>prima ripresa.</em></h2>
+      </div>
+    </div>
+    <ol class="steps">
+      <li data-reveal><b>Ci sentiamo</b><span>Una visita, un messaggio su WhatsApp o la presentazione di un amico.</span></li>
+      <li data-reveal><b>Incontro di 15 minuti</b><span>Nel tuo locale: guardiamo il tuo profilo e ti mostriamo reel di attività simili.</span></li>
+      <li data-reveal><b>Proposta lo stesso giorno</b><span>Su WhatsApp: pacchetto, prezzo, data della prima ripresa.</span></li>
+      <li data-reveal><b>Reel di prova</b><span>Se ti serve vedere prima come lavoriamo.</span></li>
+      <li data-reveal><b>Si parte</b><span>Firma e primo pagamento, prima ripresa entro 7 giorni.</span></li>
+    </ol>
+  </div>
+</section>
+
 <!-- ============================ PACCHETTI ============================ -->
 <section class="section" id="pacchetti" aria-labelledby="pacchetti-title">
   <div class="wrap">
     <div class="section-head">
-      <div class="index" data-reveal><span class="n">02</span><span class="label">Pacchetti</span></div>
+      <div class="index" data-reveal><span class="n">03</span><span class="label">Pacchetti</span></div>
       <div data-reveal style="--d:.1s">
         <h2 id="pacchetti-title">Tre pacchetti. <em>Prezzi chiari.</em></h2>
         <p>Scegli quanto vuoi essere presente: noi pensiamo a riprese, testi, montaggio e pubblicazione.</p>
@@ -238,7 +256,7 @@
 <section class="section tint" id="siti" aria-labelledby="siti-title">
   <div class="wrap">
     <div class="section-head">
-      <div class="index" data-reveal><span class="n">03</span><span class="label">Siti web</span></div>
+      <div class="index" data-reveal><span class="n">04</span><span class="label">Siti web</span></div>
       <div data-reveal style="--d:.1s">
         <h2 id="siti-title">Il tuo sito, <em>online in una settimana.</em></h2>
         <p>Un lavoro una tantum, sempre separato dai pacchetti. I testi li scriviamo noi, le foto vengono dal servizio fotografico o da una ripresa dedicata.</p>
@@ -277,76 +295,6 @@
   </div>
 </section>
 
-<!-- ============================ LAVORI ============================ -->
-<section class="section" id="lavori" aria-labelledby="lavori-title">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="index" data-reveal><span class="n">04</span><span class="label">Lavori</span></div>
-      <div data-reveal style="--d:.1s">
-        <h2 id="lavori-title">Reel girati <em>sul posto</em>, per attività come la tua.</h2>
-        <p>Dietro le quinte, prima e dopo, la domanda del cliente, il prodotto del giorno, il titolare che parla.</p>
-      </div>
-    </div>
-
-    <!-- Ogni lavoro: un .reel con video, poster, settore e pulsante play (id del video unico) -->
-    <div class="work-grid few">
-      <figure class="work" data-reveal>
-        <div class="reel">
-          <video id="w-civico191" src="assets/clienti/civico191.mp4" poster="assets/clienti/civico191.jpg" preload="none" playsinline></video>
-          <span class="dur">2:13</span>
-          <button class="play play-btn" type="button" data-play="w-civico191" aria-label="Guarda il video di Civico 191"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></button>
-        </div>
-        <figcaption><span class="label muted">Ristorazione</span><b>Civico 191</b><span>Ristorante e Gastronomia</span></figcaption>
-      </figure>
-      <figure class="work" data-reveal style="--d:.08s">
-        <div class="reel">
-          <video id="w-clubplayer" src="assets/clienti/club-and-player.mp4" poster="assets/clienti/club-and-player.jpg" preload="none" playsinline></video>
-          <span class="dur">1:52</span>
-          <button class="play play-btn" type="button" data-play="w-clubplayer" aria-label="Guarda il video di Club and Player"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></button>
-        </div>
-        <figcaption><span class="label muted">Sport · Calcio</span><b>Club and Player</b><span>Riprese sul campo</span></figcaption>
-      </figure>
-    </div>
-
-    <!-- Caso cliente "Prima e dopo": da riattivare quando ci sono i numeri reali del cliente.
-    <div class="case">
-      <div data-reveal>
-        <span class="label">Caso cliente</span>
-        <h3>Prima e dopo, con i numeri veri.</h3>
-        <p>Il profilo di un cliente prima di DIECI+ e oggi: visualizzazioni, messaggi, follower. Pubblicato solo con il suo permesso.</p>
-      </div>
-      <div class="ba" data-reveal style="--d:.1s">
-        <div><span class="label muted">Prima</span>
-          <dl><div><dt>Visualizzazioni al mese</dt><dd>—</dd></div><div><dt>Messaggi ricevuti</dt><dd>—</dd></div><div><dt>Follower</dt><dd>—</dd></div></dl>
-        </div>
-        <div><span class="label">Con DIECI+</span>
-          <dl><div><dt>Visualizzazioni al mese</dt><dd>—</dd></div><div><dt>Messaggi ricevuti</dt><dd>—</dd></div><div><dt>Follower</dt><dd>—</dd></div></dl>
-        </div>
-      </div>
-    </div>
-    -->
-  </div>
-</section>
-
-<!-- ============================ METODO ============================ -->
-<section class="section" id="metodo" aria-labelledby="metodo-title">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="index" data-reveal><span class="n">05</span><span class="label">Metodo</span></div>
-      <div data-reveal style="--d:.1s">
-        <h2 id="metodo-title">Dal primo caffè alla <em>prima ripresa.</em></h2>
-      </div>
-    </div>
-    <ol class="steps">
-      <li data-reveal><b>Ci sentiamo</b><span>Una visita, un messaggio su WhatsApp o la presentazione di un amico.</span></li>
-      <li data-reveal><b>Incontro di 15 minuti</b><span>Nel tuo locale: guardiamo il tuo profilo e ti mostriamo reel di attività simili.</span></li>
-      <li data-reveal><b>Proposta lo stesso giorno</b><span>Su WhatsApp: pacchetto, prezzo, data della prima ripresa.</span></li>
-      <li data-reveal><b>Reel di prova</b><span>Se ti serve vedere prima come lavoriamo.</span></li>
-      <li data-reveal><b>Si parte</b><span>Firma e primo pagamento, prima ripresa entro 7 giorni.</span></li>
-    </ol>
-  </div>
-</section>
-
 <!-- ============================ CHI SIAMO ============================ -->
 <section class="section tint" id="chi-siamo" aria-labelledby="chi-title">
   <div class="wrap about">
@@ -361,7 +309,7 @@
       </ul>
     </div>
     <div data-reveal style="--d:.1s">
-      <span class="label">06 · Chi siamo</span>
+      <span class="label">05 · Chi siamo</span>
       <h2 id="chi-title">Ragazzi della zona che fanno reel <em>che portano gente nel locale.</em></h2>
       <p>Siamo di Carlentini. Non siamo un'agenzia internazionale: veniamo da te, conosciamo le attività del territorio e parliamo la tua lingua. Clienti, prenotazioni, gente in negozio.</p>
       <ul class="places"><li>Carlentini</li><li>Lentini</li><li>Siracusa</li><li>Catania</li></ul>
@@ -406,7 +354,7 @@
       </div>
       <div>
         <h4>Servizi</h4>
-        <ul><li><a href="#pacchetti">Pacchetti</a></li><li><a href="#siti">Siti web</a></li><li><a href="#lavori">Lavori</a></li></ul>
+        <ul><li><a href="#pacchetti">Pacchetti</a></li><li><a href="#siti">Siti web</a></li><li><a href="#clienti">Clienti</a></li></ul>
       </div>
       <div>
         <h4>Studio</h4>

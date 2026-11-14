@@ -66,6 +66,11 @@ const CONFIG = {
     });
   });
 
+  // Anteprime nell'hero: ferme se l'utente preferisce meno movimento
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.querySelectorAll(".reel.live video").forEach((v) => { v.removeAttribute("autoplay"); v.pause(); });
+  }
+
   // Ingressi
   const hero = document.querySelector(".hero");
   requestAnimationFrame(() => requestAnimationFrame(() => hero.classList.add("in")));
