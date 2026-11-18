@@ -156,8 +156,8 @@
   const stage = document.querySelector(".reel-stack");
   if (stage && !calm.matches) {
     const reels = [...stage.querySelectorAll(".reel")];
-    const speed = [-0.08, -0.16, -0.04];
-    const base = ["rotate(-7deg)", "none", "rotate(7deg)"];
+    const speed = [-0.08, -0.16, -0.04, -0.12];
+    const base = ["rotate(-8deg)", "none", "rotate(8deg)", "rotate(3deg)"];
     let ticking = false;
     const paint = () => {
       ticking = false;

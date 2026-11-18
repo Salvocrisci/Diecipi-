@@ -157,12 +157,13 @@ main > * { width: 100%; }
 .reel-stack::after {
   content: "Lavori reali  ·  guarda"; position: absolute; left: var(--m-gutter); top: 16px;
   font: 500 10.5px/1 var(--display); letter-spacing: .28em; text-transform: uppercase; color: var(--lavanda-300);
-  z-index: 3;
+  z-index: 5;
 }
-.reel-stack .reel { width: 44%; top: auto; box-shadow: 0 30px 50px -24px rgba(0,0,0,.55); will-change: transform; }
-.reel-stack .reel:nth-child(1) { left: 2%; top: 88px; transform: rotate(-7deg); }
-.reel-stack .reel:nth-child(2) { left: 28%; top: 52px; z-index: 2; transform: none; }
-.reel-stack .reel:nth-child(3) { left: 54%; top: 100px; transform: rotate(7deg); }
+.reel-stack .reel { width: 39%; top: auto; box-shadow: 0 30px 50px -24px rgba(0,0,0,.55); will-change: transform; }
+.reel-stack .reel:nth-child(1) { left: -4%; top: 92px; transform: rotate(-8deg); }
+.reel-stack .reel:nth-child(2) { left: 18%; top: 52px; z-index: 3; transform: none; }
+.reel-stack .reel:nth-child(3) { left: 65%; top: 104px; transform: rotate(8deg); }
+.reel-stack .reel:nth-child(4) { left: 42%; top: 68px; z-index: 4; transform: rotate(3deg); }
 
 /* Fatti chiave: striscia bianca su viola */
 .hero-facts {
