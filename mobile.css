@@ -272,6 +272,10 @@ main > * { width: 100%; }
 .voice-feature.rev .voice-stat span { color: var(--testo-2); }
 .voice-feature.rev .voice-stat em { color: var(--viola); }
 
+/* Cliente senza un dato misurato: al posto del numero, le sue parole */
+.voice-feature blockquote { order: 1; border-radius: 24px; padding: 24px 22px 26px; background: var(--viola); color: var(--bianco); font: 500 clamp(28px, 8.4vw, 36px)/1.1 var(--display); letter-spacing: -.03em; text-wrap: pretty; }
+.voice-feature blockquote::before, .voice-feature blockquote::after { color: var(--lavanda-300); }
+
 /* Testimonianza e fonte */
 .voice-quote { order: 2; font: 500 24px/1.22 var(--display); letter-spacing: -.02em; }
 .voice-quote::before { content: ""; display: block; width: 32px; height: 3px; background: var(--viola); margin-bottom: 16px; border-radius: 2px; }
