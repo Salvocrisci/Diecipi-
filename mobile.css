@@ -27,6 +27,7 @@ main { display: flex; flex-direction: column; }
 main > * { width: 100%; }
 .hero { order: 1; }
 .zones { order: 2; }
+.promo { order: 2; }
 .manifesto { order: 3; }
 .m-work { order: 4; }
 #clienti { order: 5; }
@@ -199,6 +200,18 @@ main > * { width: 100%; }
   font: 500 var(--m-h2)/.98 var(--display); letter-spacing: -.045em; max-width: 12ch;
 }
 .section-head p, .m-head p { font-size: 16.5px; line-height: 1.55; margin-top: 18px; }
+
+/* --------------------------------------------------------------------------
+   Video promo: titolo, video a tutta larghezza, poi l'invito
+   -------------------------------------------------------------------------- */
+.promo-grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "head" "reel" "foot"; gap: 28px; }
+.promo-head h2 { font: 500 var(--m-h2)/.98 var(--display); letter-spacing: -.045em; max-width: 12ch; }
+.promo-head p { font-size: 16.5px; line-height: 1.55; margin-top: 18px; }
+.promo-reel { width: 100%; border-radius: 28px; }
+.promo-reel .play-btn { width: 76px; height: 76px; margin: -38px 0 0 -38px; }
+.promo-foot { justify-items: stretch; }
+.promo-foot .voice-tags { order: 0; }
+.promo-foot .btn { width: 100%; justify-content: center; margin-top: 8px; }
 
 /* --------------------------------------------------------------------------
    Manifesto: cosa rende diverso DIECI+

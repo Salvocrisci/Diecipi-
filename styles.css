@@ -551,5 +551,21 @@ a.reel-stack { display: block; color: inherit; text-decoration: none; }
 .voice-quote { margin: 0; font: 400 clamp(18px, 1.7vw, 22px)/1.4 var(--display); color: var(--testo); max-width: 36ch; }
 .reel-stack::before { content: none; }
 
+/* Video promo */
+.promo-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); grid-template-areas: "head reel" "foot reel"; gap: 32px clamp(28px, 6vw, 88px); align-items: center; }
+.promo-head { grid-area: head; align-self: end; }
+.promo-head h2 { font: 400 clamp(36px, 5vw, 68px)/1.02 var(--display); letter-spacing: -.04em; margin: 18px 0 0; text-wrap: balance; }
+.promo-head h2 em { font-style: normal; color: var(--viola); }
+.promo-head p { font-size: clamp(17px, 1.4vw, 19px); color: var(--testo-2); max-width: 44ch; margin: 22px 0 0; }
+.promo-foot { grid-area: foot; align-self: start; display: grid; gap: 14px; justify-items: start; }
+.promo-foot .btn { margin-top: 14px; }
+.promo-reel { grid-area: reel; background: var(--viola-notte); }
+.promo-reel::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,18,61,0) 60%, rgba(23,18,61,.45)); pointer-events: none; transition: opacity .4s var(--ease); }
+.promo-reel.playing::after { opacity: 0; }
+.promo-reel .play-btn { top: 70%; border: 0; cursor: pointer; z-index: 2; width: 72px; height: 72px; margin: -36px 0 0 -36px; }
+.promo-reel .play-btn svg { width: 22px; height: 22px; }
+.promo-reel .play-btn:focus-visible { outline: 3px solid var(--bianco); outline-offset: 4px; }
+.promo-reel .dur { position: absolute; top: 14px; right: 14px; z-index: 2; font: 500 12px/1 var(--testo-font); color: var(--bianco); background: rgba(23,18,61,.6); padding: 6px 9px; border-radius: 999px; pointer-events: none; }
+
 /* Elementi solo mobile: nascosti qui, gestiti da mobile.css sotto i 768px */
 .m-only, .hero h1 .line.m-only { display: none; }
