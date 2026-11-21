@@ -545,16 +545,30 @@ a { color: inherit; }
 /* --------------------------------------------------------------------------
    Chi siamo
    -------------------------------------------------------------------------- */
-.about { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
-.about-photo { position: relative; aspect-ratio: 4 / 5; border-radius: 28px; overflow: hidden; background: var(--lavanda-100); display: grid; place-items: center; }
-.about-photo img.mark { width: 46%; height: auto; opacity: .9; }
-.about-photo .cap { position: absolute; left: 20px; bottom: 20px; }
-.about h2 { font: 400 clamp(36px, 4.6vw, 60px)/1.02 var(--display); letter-spacing: -.04em; margin: 24px 0 24px; text-wrap: balance; }
+.about { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-template-areas: "video head" "video details"; gap: 28px clamp(32px, 6vw, 96px); align-items: start; }
+.about-head { grid-area: head; align-self: end; }
+.about h2 { font: 400 clamp(36px, 4.6vw, 60px)/1.02 var(--display); letter-spacing: -.04em; margin: 24px 0 22px; text-wrap: balance; }
 .about h2 em { font-style: normal; color: var(--viola); }
-.about p { color: var(--testo-2); max-width: 48ch; }
-.about .places { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; padding: 0; list-style: none; }
-.about .places li { padding: 10px 16px; border-radius: 999px; background: var(--lavanda-100); color: var(--viola); font: 500 14px/1 var(--display); }
-@media (max-width: 860px) { .about { grid-template-columns: minmax(0,1fr); } .about-photo { aspect-ratio: 5 / 4; } }
+.about-lead { margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.55; color: var(--testo-2); max-width: 52ch; }
+.about-reel { grid-area: video; width: 100%; max-width: 400px; justify-self: center; align-self: center; background: var(--viola-notte); }
+.about-reel::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,18,61,0) 60%, rgba(23,18,61,.45)); pointer-events: none; transition: opacity .4s var(--ease); }
+.about-reel.playing::after { opacity: 0; }
+.about-reel .play-btn { top: 62%; border: 0; cursor: pointer; z-index: 2; width: 72px; height: 72px; margin: -36px 0 0 -36px; }
+.about-reel .play-btn svg { width: 22px; height: 22px; }
+.about-reel .play-btn:focus-visible { outline: 3px solid var(--bianco); outline-offset: 4px; }
+.about-reel .dur { position: absolute; top: 14px; right: 14px; z-index: 2; font: 500 12px/1 var(--testo-font); color: var(--bianco); background: rgba(23,18,61,.6); padding: 6px 9px; border-radius: 999px; pointer-events: none; }
+.about-details { grid-area: details; display: grid; gap: 32px; justify-items: start; }
+.about-pillars { list-style: none; margin: 0; padding: 0; width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+.about-pillars li { padding: 18px 0; border-top: 1px solid var(--lavanda-300); }
+.about-pillars b { display: block; font: 500 clamp(19px, 1.7vw, 22px)/1.2 var(--display); letter-spacing: -.01em; color: var(--testo); }
+.about-pillars span { display: block; margin-top: 6px; font-size: 15px; line-height: 1.5; color: var(--testo-2); }
+.about-status { width: 100%; padding: 22px 24px; border-radius: 22px; background: var(--viola); color: var(--bianco); }
+.about-status .label { color: var(--lavanda-300); }
+.about-clients { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 0; }
+.about-clients li { font: 500 clamp(18px, 1.7vw, 22px)/1.25 var(--display); letter-spacing: -.01em; }
+.about-clients li + li::before { content: "·"; margin: 0 14px; color: var(--lavanda-300); }
+@media (max-width: 980px) { .about-pillars { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 860px) { .about { grid-template-columns: minmax(0, 1fr); grid-template-areas: "head" "video" "details"; } }
 
 /* --------------------------------------------------------------------------
    Natale
@@ -636,13 +650,6 @@ a { color: inherit; }
 @media (max-width: 560px) { .work-grid.few { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 78%; } }
 
 /* Chi siamo senza foto */
-.about-card { background: var(--viola); color: var(--bianco); border-radius: 28px; padding: clamp(28px, 4vw, 48px); display: grid; gap: clamp(28px, 4vw, 44px); align-content: center; }
-.about-card .logo { width: clamp(96px, 14vw, 140px); height: auto; }
-.about-card ul { list-style: none; margin: 0; padding: 0; display: grid; }
-.about-card li { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 16px; padding: 18px 0; border-top: 1px solid rgba(255,255,255,.22); align-items: baseline; }
-.about-card li b { font: 500 clamp(20px, 2vw, 24px)/1.15 var(--display); letter-spacing: -.01em; }
-.about-card li span { font-size: 15px; color: rgba(255,255,255,.78); }
-@media (max-width: 420px) { .about-card li { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
 
 /* Hero con video reali */
 a.reel-stack { display: block; color: inherit; text-decoration: none; }

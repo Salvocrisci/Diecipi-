@@ -1,4 +1,4 @@
-/* DIECI+ — interazioni solo mobile (sotto i 768px).
+/* Dieci Più — interazioni solo mobile (sotto i 768px).
    Tutto ciò che crea è marcato .m-only o agisce solo con mobile.css:
    su tablet e desktop la pagina resta quella di sempre. */
 (function () {

@@ -366,10 +366,16 @@ main > * { width: 100%; }
    Chi siamo
    -------------------------------------------------------------------------- */
 .about { grid-template-columns: minmax(0, 1fr); gap: 40px; }
-.about > [data-reveal]:last-child { order: -1; }
+.about-head { align-self: start; }
+.about-reel { max-width: none; border-radius: 28px; }
+.about-reel .play-btn { width: 76px; height: 76px; margin: -38px 0 0 -38px; }
+.about-pillars { grid-template-columns: minmax(0, 1fr); }
+.about-pillars li { padding: 16px 0; }
+.about-status { padding: 20px 18px; }
+.about-clients { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px; }
+.about-clients li + li::before { content: none; }
+.about-details .btn { width: 100%; justify-content: center; }
 .about h2 { margin: 18px 0 18px; max-width: 14ch; }
-.about-card { border-radius: 28px; padding: 28px 22px; }
-.about-card li { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 16px 0; }
 
 /* --------------------------------------------------------------------------
    Contatti e chiusura
