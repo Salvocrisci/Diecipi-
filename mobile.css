@@ -393,6 +393,13 @@ main > * { width: 100%; }
 .footer .logo { width: 132px; }
 .footer a { display: inline-block; padding: 6px 0; }
 .footer-bottom { margin-top: 48px; }
+.footer-legal { margin-top: 44px; padding-top: 28px; gap: 24px; }
+.footer-facts { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px 24px; }
+.footer-facts > :first-child, .footer-facts .footer-sede, .footer-facts > :last-child { grid-column: 1 / -1; }
+.footer .footer-facts a { padding: 0; overflow-wrap: anywhere; }
+.footer-legal + .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 28px; }
+.footer .footer-links { gap: 0 20px; }
+.sol-privacy { font-size: 13.5px; }
 
 /* --------------------------------------------------------------------------
    Movimento (solo se l'utente non chiede movimento ridotto)

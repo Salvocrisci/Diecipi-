@@ -17,6 +17,17 @@
 <meta property="og:description" content="Riprese, montaggio e pubblicazione: ci pensiamo noi.">
 <meta property="og:image" content="assets/brand/og-image.png">
 <meta property="og:locale" content="it_IT">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Dieci Più",
+  "legalName": "Crisci Enterprise LLC",
+  "url": "https://diecipiu.com/",
+  "logo": "https://diecipiu.com/assets/brand/logo-dieci-piu.png",
+  "sameAs": ["https://www.instagram.com/diecipiu_agency/", "https://www.tiktok.com/@dieci_piu"]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -382,7 +393,8 @@
       </div>
 
       <div class="sol-field sol-consent">
-        <label class="sol-check"><input type="checkbox" name="consenso" required aria-describedby="e-consenso"> <span>Acconsento a essere ricontattato da Dieci Più su questa richiesta. I dati non vengono salvati sul sito: li invii tu, su WhatsApp.</span></label>
+        <p class="sol-privacy" id="sol-privacy">Usiamo questi dati solo per rispondere alla tua richiesta e prepararti una proposta. Il messaggio parte dal tuo WhatsApp: il sito non conserva nome e contatti. Sul tuo dispositivo restano soltanto i servizi scelti, finché non premi «Azzera le scelte». Tutti i dettagli nella <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+        <label class="sol-check"><input type="checkbox" name="consenso" required aria-describedby="sol-privacy e-consenso"> <span>Ho letto la <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a> e chiedo di essere ricontattato da Dieci Più su questa richiesta.</span></label>
         <p class="field-err" id="e-consenso" data-err="consenso" hidden></p>
       </div>
 
@@ -516,8 +528,24 @@
         <ul><li><a data-social="instagram" href="#" rel="noopener" target="_blank">Instagram</a></li><li><a data-social="tiktok" href="#" rel="noopener" target="_blank">TikTok</a></li><li><a data-wa href="#contatti">WhatsApp</a></li></ul>
       </div>
     </div>
+    <div class="footer-legal">
+      <p class="footer-entity">Dieci Più è un brand commerciale di <b>Crisci Enterprise LLC</b>, società costituita nello Stato del Delaware, Stati Uniti d'America.</p>
+      <dl class="footer-facts">
+        <div><dt>Ragione sociale</dt><dd>Crisci Enterprise LLC</dd></div>
+        <div><dt>Forma societaria</dt><dd>Limited Liability Company</dd></div>
+        <div><dt>Costituita in</dt><dd>Delaware, USA</dd></div>
+        <div class="footer-sede"><dt>Sede legale</dt><dd>300 Creek View Road, Suite 209, Newark, DE 19711, USA</dd></div>
+        <div><dt>File number</dt><dd>5205564</dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:marketing.dieci.piu@gmail.com">marketing.dieci.piu@gmail.com</a></dd></div>
+      </dl>
+    </div>
     <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Dieci Più</span>
+      <span>© <span data-year>2026</span> Dieci Più — Brand di Crisci Enterprise LLC. Tutti i diritti riservati.</span>
+      <ul class="footer-links" aria-label="Documenti legali">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookie.html">Cookie Policy</a></li>
+        <li><a href="termini.html">Termini e condizioni</a></li>
+      </ul>
     </div>
   </div>
 </footer>

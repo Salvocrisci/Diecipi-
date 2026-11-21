@@ -602,6 +602,25 @@ a { color: inherit; }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 72px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.16); font-size: 13px; color: var(--lavanda-300); }
 @media (max-width: 860px) { .footer-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } .footer-grid > :first-child { grid-column: 1 / -1; } }
 
+/* Identità societaria: discreta, sotto i link */
+.footer-legal { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 24px 40px; align-items: start; margin-top: 64px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,.16); }
+.footer .footer-entity { margin: 0; max-width: 46ch; font-size: 14px; line-height: 1.65; color: var(--lavanda-200); }
+.footer-entity b { font-weight: 500; color: var(--bianco); }
+.footer-facts { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 16px 40px; margin: 0; }
+.footer-facts dt { font: 500 10.5px/1 var(--display); letter-spacing: .28em; text-transform: uppercase; color: var(--lavanda-300); }
+.footer-facts dd { margin: 8px 0 0; font: 400 14.5px/1.4 var(--display); color: var(--bianco); }
+.footer-facts .footer-sede dd { max-width: 22ch; }
+.footer .footer-facts a { font-size: 14.5px; }
+.footer-legal + .footer-bottom { margin-top: 32px; align-items: center; }
+.footer .footer-links { display: flex; flex-wrap: wrap; gap: 6px 24px; }
+.footer .footer-links a { font-size: 13px; color: var(--lavanda-200); }
+.footer .footer-links a:hover { color: var(--bianco); }
+@media (max-width: 860px) { .footer-legal { grid-template-columns: minmax(0, 1fr); } }
+
+/* Testo informativo privacy nel modulo di richiesta */
+.sol-privacy { margin: 0 0 14px; max-width: 70ch; font-size: 14px; line-height: 1.6; color: var(--testo-2); }
+.sol-privacy a, .sol-check a { color: var(--viola); text-underline-offset: 3px; }
+
 /* --------------------------------------------------------------------------
    WhatsApp fisso
    -------------------------------------------------------------------------- */

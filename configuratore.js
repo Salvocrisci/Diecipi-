@@ -321,7 +321,7 @@ const CATALOGO_SERVIZI = [
     });
     d.note = form.elements.note.value.trim();
     if (state.path === "b" && !selected().length) { setErr("percorso", "Scegli almeno un servizio oppure «Consigliatemi voi»."); first = first || radios[0]; }
-    if (!form.elements.consenso.checked) { setErr("consenso", "Serve il tuo consenso per poterti ricontattare."); first = first || form.elements.consenso; }
+    if (!form.elements.consenso.checked) { setErr("consenso", "Conferma di aver letto la Privacy Policy per inviare la richiesta."); first = first || form.elements.consenso; }
     if (first) { first.focus(); return; }
 
     const num = typeof CONFIG !== "undefined" && CONFIG.whatsapp ? String(CONFIG.whatsapp).replace(/\D/g, "") : "";
