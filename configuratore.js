@@ -1,4 +1,4 @@
-/* Dieci Più — Costruisci la tua soluzione
+/* DIECI PIÙ — Costruisci la tua soluzione
    Configuratore di servizi: nessun prezzo, nessun carrello.
    Raccoglie le esigenze e prepara la richiesta di proposta su WhatsApp. */
 
@@ -297,12 +297,12 @@ const CATALOGO_SERVIZI = [
   form.elements.consenso.addEventListener("change", () => clearErr("consenso"));
 
   const buildMessage = (d) => {
-    const L = ["Ciao Dieci Più, vorrei una proposta per la mia attività.", "",
+    const L = ["Ciao DIECI PIÙ, vorrei una proposta per la mia attività.", "",
       "Nome: " + d.nome, "Attività: " + d.attivita, "Contatto: " + d.contatto,
       "Settore: " + d.settore, "Obiettivo: " + d.obiettivo, ""];
     if (state.path === "a") L.push("Percorso: consigliatemi voi i servizi più adatti.");
     else {
-      L.push("La mia soluzione Dieci Più:");
+      L.push("La mia soluzione DIECI PIÙ:");
       selected().forEach((s) => L.push("- " + s.nome + (detail(s) ? ": " + detail(s) : "")));
     }
     if (d.note) L.push("", "Note: " + d.note);

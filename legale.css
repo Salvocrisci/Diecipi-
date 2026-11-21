@@ -1,4 +1,4 @@
-/* Dieci Più — pagine legali (privacy, cookie, termini)
+/* DIECI PIÙ — pagine legali (privacy, cookie, termini)
    Usa i token e il footer di styles.css. */
 
 .legal-nav { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.92); backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--linea); }

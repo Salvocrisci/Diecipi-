@@ -1,9 +1,9 @@
-/* Dieci Più — interazioni */
+/* DIECI PIÙ — interazioni */
 
 // ---- Da compilare: contatti reali ----
 const CONFIG = {
   whatsapp: "393920005024",  // +39 392 000 5024 (prefisso internazionale, solo cifre)
-  messaggio: "Ciao Dieci Più, vorrei informazioni per la mia attività.",
+  messaggio: "Ciao DIECI PIÙ, vorrei informazioni per la mia attività.",
   instagram: "https://www.instagram.com/diecipiu_agency/",
   tiktok: "https://www.tiktok.com/@dieci_piu"
 };
